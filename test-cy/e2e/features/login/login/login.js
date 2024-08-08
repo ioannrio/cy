@@ -4,8 +4,8 @@ import TestPage from '../../../pageObjects/login.page'
     Given('an Employer', () => {
       // Login section
       cy.visit('https://wmxrwq14uc.execute-api.us-east-1.amazonaws.com/Prod/Account/Login')
-      TestPage.username().type('TestUser389')
-      TestPage.password().type('^9!jT@y#)SOP')
+      TestPage.username().click().type('TestUser389')
+      TestPage.password().click().type('^9!jT@y#)SOP')
       TestPage.submitBtn().click()
     })
 
@@ -21,9 +21,9 @@ import TestPage from '../../../pageObjects/login.page'
     
     
     Then('I should be able to enter employee details', () => {
-      TestPage.firstName().type('Joe')
-      TestPage.lastName().type('Surf')
-      TestPage.dependants().type('3')
+      TestPage.firstName().click().type('Joe')
+      TestPage.lastName().click().type('Surf')
+      TestPage.dependants().click().type('3')
       TestPage.addEmployeeBtn().click()
     })
     
@@ -54,7 +54,7 @@ import TestPage from '../../../pageObjects/login.page'
     
     
     Then('I can edit employee details', () => {
-      TestPage.dependants().type('7')
+      TestPage.dependants().click().type('7')
       TestPage.addEmployeeBtn().click()
     })
     
